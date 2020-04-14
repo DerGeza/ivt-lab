@@ -7,6 +7,12 @@ import java.util.Random;
 *
 * (Deliberately contains bugs.)
 */
+
+
+/**
+ * valtoztatas, hogy legyen Levinek is mit nézni
+ */
+
 public class TorpedoStore {
 
   // rate of failing to fire torpedos [0.0, 1.0]

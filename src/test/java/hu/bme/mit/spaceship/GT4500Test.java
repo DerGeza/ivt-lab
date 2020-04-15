@@ -130,6 +130,19 @@ public class GT4500Test {
     verify(secondaryStore, times(0)).fire(1);
   }
 
+  @Test
+  public void fireTorpedo_ALL_primary_empty(){
+    // Arrange 
+    when(primaryStore.isEmpty()).thenReturn(true);
+
+    // Act
+    boolean result = ship.fireTorpedo(FiringMode.ALL);
+
+    // Assert
+    assertEquals(false, result);
+    verify(primaryStore, times(1)).isEmpty();
+  }
+
   
   @Test
   public void fireTorpedo_All_Success(){
